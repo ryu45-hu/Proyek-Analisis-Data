@@ -6,7 +6,7 @@ import seaborn as sns
 # Memuat data
 @st.cache_data  # Menggunakan cache untuk menghindari pemuatan ulang yang tidak perlu
 def load_data():
-    df = pd.read_csv("dashboard/all_data.csv")
+    df = pd.read_csv("Submission/dashboard/all_data.csv")
     # Pastikan kolom tanggal tidak menyebabkan error dalam analisis numerik
     if 'date' in df.columns:
         df['date'] = pd.to_datetime(df['date'], errors='coerce')
